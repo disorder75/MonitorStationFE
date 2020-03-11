@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const monitorStationBeUrl = 'https://monitor-station-be.herokuapp.com/'
+const monitorStationBeUrl = 'https://monitor-station-be.herokuapp.com'
 
 export const environment = {
   production: false,

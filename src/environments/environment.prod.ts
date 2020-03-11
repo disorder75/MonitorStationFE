@@ -1,4 +1,4 @@
-const monitorStationBeUrl = 'https://monitor-station-be.herokuapp.com/'
+const monitorStationBeUrl = 'https://monitor-station-be.herokuapp.com'
 
 export const environment = {
   production: true,
