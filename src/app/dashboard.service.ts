@@ -17,7 +17,7 @@ export class DashboardService {
     return this.http.get<Dht11ItemsResponse>(urlApi)
       .pipe(
         map((response: Dht11ItemsResponse) => {
-          return response.dht11Items;
+          return response;
         }),
         catchError(this.handleError)
       );
@@ -29,13 +29,13 @@ export class DashboardService {
   }
 }
 
-interface Dht11ItemsResponse {
+export interface Dht11ItemsResponse {
   dht11Items: Dht11Item[];
 }
 
 export interface Dht11Item {
-  macDeviceId: string,
-  temperature: string,
-  humidityRel: string,
-  date: string
+  macDeviceId: string;
+  temperature: string;
+  humidityRel: string;
+  date: string;
 }
