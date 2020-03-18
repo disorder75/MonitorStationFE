@@ -1,7 +1,4 @@
-/*
- *    CARD
- */
- .mat-card {
+.mat-card {
     max-width: 150px;
     margin: auto;
 }

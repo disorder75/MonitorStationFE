@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
 import { AppComponent } from './app.component';
 
-// Material 
+// Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
+//import { MatButtonModule } from '@angular/material/button';
+//import { MatIconModule } from '@angular/material/icon';
+//import { MatSidenavModule } from '@angular/material/sidenav';
+//import { MatToolbarModule } from '@angular/material/toolbar';
+//import { MatMenuModule } from '@angular/material/menu';
+//import { MatCardModule } from '@angular/material/card';
+import { MaterialModule } from './material-module/material-module.module';
 
 // app
 import { DashboardComponent } from './dashboard/dashboard.component'
@@ -23,7 +25,7 @@ import { CreditsModule } from './credits/credits.module';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,11 +33,13 @@ import { CreditsModule } from './credits/credits.module';
     HttpClientModule,
     //material
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatMenuModule,
+    //MatButtonModule,
+    //MatIconModule,
+    //MatSidenavModule,
+    //MatToolbarModule,
+    //MatMenuModule,
+    //MatCardModule,
+    MaterialModule,
     //app
     DevicesModule,
     GraphsModule,
