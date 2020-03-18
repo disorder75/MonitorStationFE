@@ -1,0 +1,28 @@
+<header>
+    <h1>UNIMI - Monitor Station</h1>
+ </header>
+<body>
+
+  <h2 *ngIf="data[0]">
+    network device id {{ data[0].macDeviceId }}
+  </h2>
+
+  <div id="container" style="width:100%;"></div>
+
+<!---
+<div *ngIf="data">
+  <ul>
+    <li *ngFor="let idata of data">
+       <span>MAC Device {{idata.macDeviceId}} {{idata.temperature}} °C {{idata.humidityRel}} %rel on {{idata.date}} </span>
+    </li>
+  </ul>
+</div>
+-->
+
+</body>
+<footer>
+  <p>
+    realtime values from fields
+  </p>
+</footer>
+<router-outlet></router-outlet>

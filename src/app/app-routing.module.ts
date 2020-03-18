@@ -1,10 +1,28 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+    {
+        path:'devices',
+        loadChildren:() => import('./devices/devices.module').then(m => m.DevicesModule)
+    },
+    {
+        path:'graphs',
+        loadChildren:() => import('./graphs/graphs.module').then(m => m.GraphsModule)
+    },
+    {
+        path:'credits',
+        loadChildren:() => import('./credits/credits.module').then(m => m.CreditsModule)
+    },
+    {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full'
+    }     
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [ RouterModule.forRoot(routes, { enableTracing: true })],
+    exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
